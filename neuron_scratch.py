@@ -1,4 +1,6 @@
 import numpy as np
+def sigmoid(x):
+    return 1/(1+np.exp(-x))
 class neuron:
     def __init__(self,weight,bias):
         self.weight=weight
@@ -6,9 +8,6 @@ class neuron:
     def feedForward(self,input):
          return sigmoid(np.dot(input,self.weight)+ self.bias)
 
-
-def sigmoid(x):
-    return 1/(1+np.exp(-x))
          
 w=np.array([0,1])
 i=np.array([2,3])
