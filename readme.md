@@ -1,4 +1,4 @@
-### Some neural network implementation from scratch
+### Vanilla neural network implementation from scratch
 
 
 ### Book: Neural Networks from Scratch in Python Harrison Kinsley & Daniel Kukieła
