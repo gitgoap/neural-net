@@ -21,7 +21,7 @@ print(output)
 
 '''
 
-
+"""
 #2: Manually adding layers for forward pas
 import numpy as np
 
@@ -42,5 +42,32 @@ layer2output=np.dot(layer1output, np.array(weights2).T)+biases2
 
 
 print(layer2output)
+"""
 
+#3 Object 
+
+import numpy as np
+np.random.seed(0)
+
+X=[[1,2,3,4],
+   [2,3,4,5],
+   [5,6,7,8]] #input represented by X
+#X=np.random.rand(3,4)
+class dense_layer:
+     def __init__(self, input_neuron, output_neuron):
+        self.weight = np.random.randn(input_neuron, output_neuron)
+        self.bias   = np.zeros((1,output_neuron)) #double bracket neccesary
+        
+     
+     def forward_pass(self,input):
+        self.output=np.dot(input, self.weight)+self.bias
+
+first=dense_layer(4,5)  
+second=dense_layer(5,2)
+
+
+first.forward_pass(X)
+second.forward_pass(first.output)
+
+print(second.output)
 
