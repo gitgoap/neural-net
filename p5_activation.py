@@ -24,4 +24,5 @@ layer1a.forward(layer1.output)
  
 
 print(layer1a.output)
-           
+#print(X)
+#print(y)           
