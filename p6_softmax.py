@@ -76,8 +76,7 @@ class activation:
         self.output_s=1/(1+np.exp(-input)) 
 
     def softmax(self,input):
-        exp_value=np.exp(input)
-        #self.output=np.exp(input)/np.sum((np.exp(input), axis=1, keepdims=True))    # this not working
+        exp_value=np.exp(input) - np.max(input) #this step implements overflow solution : v = u- max(u)
         self.output=exp_value/ np.sum(exp_value, axis=1, keepdims=True)
 
 first_layer=neural_net(3,3) #layers overview 3x5x4x2
