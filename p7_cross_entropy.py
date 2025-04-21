@@ -1,6 +1,6 @@
 # cross-entropy for classification problem
 import numpy as np
-predicted_output=[0.7, 0.1, 0.2]  # These output came from softmax function
+predicted_output=[0.7, 0.1, 0.2]  # These output came from softmax function called confidence value
 target_output=   [1, 0, 0]        #0.7 should be 1 others should be 0, like a one-hot vector
 
 cross_entropy_loss = -(np.log(predicted_output[0])*target_output[0] + 
